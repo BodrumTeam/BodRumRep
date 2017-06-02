@@ -4,6 +4,7 @@ import { Login } from './login';
 import { Signup } from './signup';
 import { Header } from './header';
 import { Footer } from './footer';
+import { Profile } from './profile';
 
 import { AuthGuard } from './common/auth.guard';
 
@@ -14,5 +15,6 @@ export const routes: Routes = [
   { path: 'home',   component: Home, canActivate: [AuthGuard] },
   { path: 'header',   component: Header },
   { path: 'footer',   component: Footer },
+  { path: 'profile',  component: Profile },
   { path: '**',     component: Login },
 ];

@@ -15,6 +15,7 @@
     "src/signup/index.ts",
     "src/header/index.ts",
     "src/footer/index.ts",
+    "src/profile/index.ts",
     "src/index.ts",
     "src/common/headers.ts",
     "src/common/auth.guard.ts"
