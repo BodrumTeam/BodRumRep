@@ -18,9 +18,7 @@ import { routes } from './app.routes';
 
 @NgModule({
   bootstrap: [App],
-  declarations: [
-    Home, Login, Signup, App ,Header , Footer
-    ],
+  declarations: [Home, Login, Signup, App ,Header , Footer],
   imports: [
     HttpModule, BrowserModule, FormsModule,
     RouterModule.forRoot(routes, {
