@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
-const styles = require('./hamada.css');
-const template = require('./hamada.html');
+const styles = require('./header.css');
+const template = require('./header.html');
 
 @Component({
  //moduleId:module.id,
-  selector: 'hamada',
+  selector: 'header',
   template: template,
   styles: [ styles ]
 })
-export class Hamada {
+export class Header {
     constructor(public router: Router) {}
 }
