@@ -3,6 +3,7 @@ import { Home } from './home';
 import { Login } from './login';
 import { Signup } from './signup';
 import { Hamada } from './hamada';
+import { Hamada2Component } from './hamada2/hamada2.component';
 import { AuthGuard } from './common/auth.guard';
 
 export const routes: Routes = [
@@ -11,5 +12,6 @@ export const routes: Routes = [
   { path: 'signup', component: Signup },
   { path: 'home',   component: Home, canActivate: [AuthGuard] },
   { path: 'hamada',   component: Hamada },
+  { path: 'hamada2',   component: Hamada2Component },
   { path: '**',     component: Login },
 ];
