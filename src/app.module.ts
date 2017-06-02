@@ -11,6 +11,7 @@ import { Home } from './home';
 import { Login } from './login';
 import { Signup } from './signup';
 import { App } from './app';
+
 import { Header } from './header';
 import {Footer} from './footer';
 import {Profile} from './profile';
@@ -22,6 +23,7 @@ import { routes } from './app.routes';
   declarations: [
     Home, Login, Signup, App , Header , Footer , Profile
   ],
+
   imports: [
     HttpModule, BrowserModule, FormsModule,
     RouterModule.forRoot(routes, {
