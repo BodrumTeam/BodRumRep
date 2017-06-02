@@ -13,8 +13,13 @@
     "src/home/index.ts",
     "src/login/index.ts",
     "src/signup/index.ts",
+<<<<<<< HEAD
     "src/hamada/index.ts",
     "src/hamada2/hamada2.component.ts",
+=======
+    "src/header/index.ts",
+    "src/footer/index.ts",
+>>>>>>> 78951647c47eb2bd2c270b6173ca3847ced98278
     "src/index.ts",
     "src/common/headers.ts",
     "src/common/auth.guard.ts"
