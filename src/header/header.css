@@ -1,0 +1,33 @@
+.navbar-default {
+    background-color: #FFF;
+    border-color: #CCC;
+}
+.navbar {
+	background:#111;
+}
+#brand{
+  margin-right: 150px;
+  margin-left:30px
+}
+@media(min-width:767px) {
+    .navbar {
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+	@media (min-width: 768px){
+.navbar-right {
+    float: right!important;
+    margin-right: 50px;
+}
+  }
+    .top-nav-collapse {
+        padding: 0;
+    }
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+  /* background-color: #aec62c;*/
+    background-color: #F84B00;
+    color: #fff;
+}
