@@ -4,12 +4,14 @@ import { Login } from './login';
 import { Signup } from './signup';
 import { Hamada } from './hamada';
 import { AuthGuard } from './common/auth.guard';
+import { OperationsComponent } from './home/operations/operations.component';
 
 export const routes: Routes = [
-  { path: '',       component: Login },
-  { path: 'login',  component: Login },
+  { path: '',  component: Login },
+  { path: 'login', component: Login },
   { path: 'signup', component: Signup },
-  { path: 'home',   component: Home, canActivate: [AuthGuard] },
-  { path: 'hamada',   component: Hamada },
-  { path: '**',     component: Login },
+  { path: 'home', component: Home, canActivate: [AuthGuard] },
+  { path: 'hamada', component: Hamada },
+  { path: 'pm-operations', component: OperationsComponent },
+  { path: '**', component: Login },
 ];

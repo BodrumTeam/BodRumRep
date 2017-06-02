@@ -16,7 +16,8 @@
     "src/hamada/index.ts",
     "src/index.ts",
     "src/common/headers.ts",
-    "src/common/auth.guard.ts"
+    "src/common/auth.guard.ts",
+    "src/home/operations/operations.component.ts"
   ],
     "filesGlob": [
     "./src/**/*.ts",
