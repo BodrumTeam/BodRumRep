@@ -15,13 +15,15 @@ import { App } from './app';
 import { Header } from './header';
 import {Footer} from './footer';
 import {Profile} from './profile';
+import {ToolCategory} from './toolCategory';
 
 import { routes } from './app.routes';
+import{Needs} from './needs'
 
 @NgModule({
   bootstrap: [App],
   declarations: [
-    Home, Login, Signup, App , Header , Footer , Profile
+    Home, Login, Signup, App , Header , Footer , Profile ,ToolCategory,Needs
   ],
 
   imports: [

@@ -16,6 +16,8 @@
     "src/header/index.ts",
     "src/footer/index.ts",
     "src/profile/index.ts",
+    "src/toolCategory/index.ts",
+    "src/needs/index.ts",
     "src/index.ts",
     "src/common/headers.ts",
     "src/common/auth.guard.ts"

@@ -5,8 +5,9 @@ import { Signup } from './signup';
 import { Header } from './header';
 import { Footer } from './footer';
 import { Profile } from './profile';
-
+import { ToolCategory} from './toolCategory'
 import { AuthGuard } from './common/auth.guard';
+import{Needs} from './needs';
 
 export const routes: Routes = [
   { path: '',       component: Login },
@@ -16,5 +17,7 @@ export const routes: Routes = [
   { path: 'header',   component: Header },
   { path: 'footer',   component: Footer },
   { path: 'profile',  component: Profile },
+  { path: 'toolCategory',  component: ToolCategory },
+  {path:'needs',component:Needs},
   { path: '**',     component: Login },
 ];
