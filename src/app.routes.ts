@@ -9,7 +9,7 @@ import { Needs } from './needs';
 
 
 export const routes: Routes = [
-  { path: '',  component: Home },
+  { path: '',  component: Login },
   { path: 'login', component: Login },
   { path: 'signup', component: Signup },
   { path: 'home',   component: Home, canActivate: [AuthGuard] },
