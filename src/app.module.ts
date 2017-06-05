@@ -26,11 +26,8 @@ import{Needs} from './needs'
 @NgModule({
   bootstrap: [App],
   declarations: [
-<<<<<<< HEAD
-    Home, Login, Signup, App , Header , Footer, ItemsComponent, DetailComponent
-=======
-    Home, Login, Signup, App , Header , Footer , Profile ,ToolCategory,Needs
->>>>>>> fc5a46e19821a49344321896880b390b06dd8fab
+    Home, Login, Signup, App , Header , Footer, ItemsComponent,
+     DetailComponent, Profile ,ToolCategory,Needs
   ],
 
   imports: [
