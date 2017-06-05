@@ -25,8 +25,7 @@
     "src/needs/index.ts",
     "src/index.ts",
     "src/common/headers.ts",
-    "src/common/auth.guard.ts",
-    "src/home/operations/operations.component.ts"
+    "src/common/auth.guard.ts"
   ],
     "filesGlob": [
     "./src/**/*.ts",
