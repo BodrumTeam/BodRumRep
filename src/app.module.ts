@@ -10,6 +10,9 @@ import { AuthGuard } from './common/auth.guard';
 import { Home } from './home';
 import { Login } from './login';
 import { Signup } from './signup';
+import{ItemsComponent} from'./items/item.component'
+import{DetailComponent} from'./item details/detail.component'
+
 import { App } from './app';
 
 import { Header } from './header';
@@ -23,7 +26,11 @@ import{Needs} from './needs'
 @NgModule({
   bootstrap: [App],
   declarations: [
+<<<<<<< HEAD
+    Home, Login, Signup, App , Header , Footer, ItemsComponent, DetailComponent
+=======
     Home, Login, Signup, App , Header , Footer , Profile ,ToolCategory,Needs
+>>>>>>> fc5a46e19821a49344321896880b390b06dd8fab
   ],
 
   imports: [
