@@ -7,27 +7,34 @@ import { NgModule } from '@angular/core';
 import { AUTH_PROVIDERS } from 'angular2-jwt';
 
 import { AuthGuard } from './common/auth.guard';
+
+// Components
+import { App } from './app';
 import { Home } from './home';
 import { Login } from './login';
 import { Signup } from './signup';
-import{ItemsComponent} from'./items/item.component'
-import{DetailComponent} from'./item details/detail.component'
-
-import { App } from './app';
+import { OperationsComponent } from './home/operations/operations.component';
+import{ItemsComponent} from'./items/item.component';
+import{DetailComponent} from'./item details/detail.component';
 
 import { Header } from './header';
 import {Footer} from './footer';
 import {Profile} from './profile';
 import {ToolCategory} from './toolCategory';
+import { Needs } from './needs';
 
 import { routes } from './app.routes';
-import{Needs} from './needs'
 
 @NgModule({
   bootstrap: [App],
   declarations: [
+
         Home, Login, Signup, App , Header , Footer, ItemsComponent, DetailComponent,
         Profile ,ToolCategory,Needs
+
+      ,Profile, ToolCategory, Needs, 
+    ItemsComponent, DetailComponent
+
   ],
 
   imports: [
@@ -41,3 +48,4 @@ import{Needs} from './needs'
   ]
 })
 export class AppModule {}
+
