@@ -10,6 +10,9 @@ import { AuthGuard } from './common/auth.guard';
 import { Home } from './home';
 import { Login } from './login';
 import { Signup } from './signup';
+import{ItemsComponent} from'./items/item.component'
+import{DetailComponent} from'./item details/detail.component'
+
 import { App } from './app';
 import { Header } from './header';
 import {Footer} from './footer';
@@ -18,7 +21,7 @@ import { routes } from './app.routes';
 @NgModule({
   bootstrap: [App],
   declarations: [
-    Home, Login, Signup, App , Header , Footer
+    Home, Login, Signup, App , Header , Footer, ItemsComponent, DetailComponent
   ],
   imports: [
     HttpModule, BrowserModule, FormsModule,

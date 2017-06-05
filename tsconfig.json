@@ -14,6 +14,11 @@
     "src/login/index.ts",
     "src/signup/index.ts",
     "src/header/index.ts",
+    "src/items/item.component.ts",
+    "src/item details/detail.component.ts",
+    
+
+    
     "src/footer/index.ts",
     "src/index.ts",
     "src/common/headers.ts",
