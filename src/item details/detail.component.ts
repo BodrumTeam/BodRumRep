@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
-const styles = require('./detail.component.css');
+const styles = require('../items/item.component.css');
 const template = require('./detail.component.html');
 
 @Component({
