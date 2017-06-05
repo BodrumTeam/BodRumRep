@@ -20,7 +20,7 @@ import {Profile} from './profile';
 import {ToolCategory} from './toolCategory';
 
 import { routes } from './app.routes';
-import{Needs} from './needs';
+import { Needs } from './needs';
 
 @NgModule({
   bootstrap: [App],
@@ -40,3 +40,4 @@ import{Needs} from './needs';
   ]
 })
 export class AppModule {}
+
