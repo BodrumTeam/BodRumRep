@@ -1,13 +1,278 @@
-/*#div2{
-  
-    margin-left: 390px;
-}*/
-.footer{
-   position: absolute;
-    left: 0;
-    right: 0;
-    width: 100%;
+
+.personal{
+  font-weight:bold;
+  display:inline-block
 }
+.details{
+  background-color:rgba(252, 169, 93, 0.43);
+  display: inline-block;
+  padding:10px;
+  font-size:17px;
+  border-radius: 20px;
+  margin-left: 30px
+}
+#spe{
+  margin-left:25px;
+}
+#spe2{
+  background-color:rgba(252, 169, 93, 0.43);
+  display: inline-block;
+  padding:10px;
+  font-size:17px;
+  border-radius: 20px;
+  margin-left:10px;
+}
+.info{
+  display:inline-block;
+}
+#ic{
+  color:#F84B00;
+    font-size: 20px;
+    margin-left: 320px;
+}
+#hi{
+    padding-left: 12px;
+}
+#div1{
+  float:left;
+  margin-top:60px;
+}
+#div2{   
+    width: 200px;
+    height: 200px;
+    border:1px solid #F84B00;
+    margin-top: 185px;
+    margin-left: 970px;
+    border-radius: 20px
+}
+#see{
+  color:#F84B00;
+  font-size:18px;
+  border:1px solid #F84B00;
+}
+#add{
+  color:#F84B00;
+  font-size:25px;
+  border:1px solid #F84B00;
+  border-radius:100%;
+  padding:17px;
+  margin-left:1075px;
+  padding-left:20px;
+  margin-top:60px;
+}
+/* Section Title */
+.section-title h1{
+	font-size:48px;
+	text-transform:uppercase;
+	font-weight:700;
+	margin-bottom:50px;
+}
+
+.section-title h1:before{
+	content: url(../img/title-before.png);
+	display:block;
+	float:left;
+}
+
+@media(max-width:767px) {
+.section-title h1{
+	font-size:32px;
+	text-transform:uppercase;
+	font-weight:700;
+	margin-left:30px;
+}
+}
+
+
+
+
+
+/* Portfolio Grid and Hover Effects */
+
+.grid {
+	padding: 20px 20px 100px 20px;
+	max-width: 1300px;
+	margin: 0 auto;
+	list-style: none;
+	text-align: left;
+}
+
+.grid figure {
+	margin: 0;
+	position: relative;
+	margin-top:20px;
+}
+
+.grid figure img {
+	max-width: 100%;
+	display: block;
+	position: relative;
+}
+
+.grid figcaption {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 20px;
+	background: #000;
+	color: #ed4e6e;
+}
+
+.grid figcaption h3 {
+	font-size:18px;
+	text-transform:uppercase;
+	margin: 0;
+	padding: 0;
+	color: #fff;
+}
+
+.grid figcaption a {
+	text-align: center;
+	padding: 5px 10px;
+	border-radius: 0;
+	display: inline-block;
+	background: #ed4e6e;
+	color: #fff;
+}
+
+
+.cs-style-3 figure {
+	overflow: hidden;
+}
+
+.cs-style-3 figure img {
+	-webkit-transition: -webkit-transform 0.4s;
+	-moz-transition: -moz-transform 0.4s;
+	transition: transform 0.4s;
+}
+
+.no-touch .cs-style-3 figure:hover img,
+.cs-style-3 figure.cs-hover img {
+	-webkit-transform: translateY(-50px);
+	-moz-transform: translateY(-50px);
+	-ms-transform: translateY(-50px);
+	transform: translateY(-50px);
+}
+
+.cs-style-3 figcaption {
+	height: 80px;
+	width: 100%;
+	top: auto;
+	bottom: 0;
+	opacity: 0;
+	-webkit-transform: translateY(100%);
+	-moz-transform: translateY(100%);
+	-ms-transform: translateY(100%);
+	transform: translateY(100%);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
+	-moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
+	transition: transform 0.4s, opacity 0.1s 0.3s;
+}
+
+.no-touch .cs-style-3 figure:hover figcaption,
+.cs-style-3 figure.cs-hover figcaption {
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	-ms-transform: translateY(0px);
+	transform: translateY(0px);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
+	-moz-transition: -moz-transform 0.4s, opacity 0.1s;
+	transition: transform 0.4s, opacity 0.1s;
+}
+
+.cs-style-3 figcaption a {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+}
+
+/* Caption Style 2 */
+.cs-style-2 figure img {
+	z-index: 10;
+	-webkit-transition: -webkit-transform 0.4s;
+	-moz-transition: -moz-transform 0.4s;
+	transition: transform 0.4s;
+}
+
+.no-touch .cs-style-2 figure:hover img,
+.cs-style-2 figure.cs-hover img {
+	-webkit-transform: translateY(-90px);
+	-moz-transform: translateY(-90px);
+	-ms-transform: translateY(-90px);
+	transform: translateY(-90px);
+}
+
+.cs-style-2 figcaption {
+	height: 90px;
+	width: 100%;
+	top: auto;
+	bottom: 0;
+}
+
+.cs-style-2 figcaption a {
+	position: absolute;
+	right: 20px;
+	top: 30px;
+}
+
+/**/
+.icon-google-plus,.icon-facebook,.icon-twitter,.icon-vimeo2,.icon-flickr,.icon-picassa,.icon-dribbble,.icon-github,.icon-wordpress,.icon-blogger,.icon-tumblr,.icon-soundcloud,.icon-linkedin,.icon-lastfm,.icon-stumbleupon,.icon-pinterest {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background-image: url(../img/icomoon-social.png);
+	background-repeat: no-repeat;
+}
+.icon-google-plus {
+	background-position: 0 0;
+}
+.icon-facebook {
+	background-position: -32px 0;
+}
+.icon-twitter {
+	background-position: -64px 0;
+}
+.icon-vimeo2 {
+	background-position: -96px 0;
+}
+.icon-flickr {
+	background-position: -128px 0;
+}
+.icon-picassa {
+	background-position: -160px 0;
+}
+.icon-dribbble {
+	background-position: -192px 0;
+}
+.icon-github {
+	background-position: -224px 0;
+}
+.icon-wordpress {
+	background-position: -256px 0;
+}
+.icon-blogger {
+	background-position: -288px 0;
+}
+.icon-tumblr {
+	background-position: -320px 0;
+}
+.icon-soundcloud {
+	background-position: -352px 0;
+}
+.icon-linkedin {
+	background-position: -384px 0;
+}
+.icon-lastfm {
+	background-position: -416px 0;
+}
+.icon-stumbleupon {
+	background-position: -448px 0;
+}
+.icon-pinterest {
+	background-position: -480px 0;
+}
+/**/
 /*--------------------------------------------------------------------------
 	General Style
 --------------------------------------------------------------------------*/
@@ -15,7 +280,7 @@ body {
   background: #FFFFFF;
 }
 .section {
-  padding: 30px 0;
+ /* padding: 30px 0;*/
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
   -o-transform: translateZ(0);
@@ -115,12 +380,11 @@ h4 {
   margin-bottom: 10px;
 }
 a {
- /* color: #aec62c*/
- color:#FF9013;
+  color: #aec62c;
   outline: 0;
 }
 a:hover {
-  color: #E4390B;
+  color: #dcff21;
   text-decoration:none;
   outline: 0;
 }
@@ -1029,9 +1293,17 @@ border:none;
 +	Breadcrumbs Section Style
 --------------------------------------------------------------------------*/
 .section-breadcrumbs {
-  background: #aec62c;
+  background: #F84B00;
   margin-bottom: 10px;
-  margin-top:90px;
+position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+        margin-top: 11px;
+            padding: 30px;
+}
+#cont{
+        margin-top: 130px;
 }
 .section-breadcrumbs h1 {
   color: #FFF;
@@ -1051,8 +1323,7 @@ border:none;
   background: #222;
   color: #A0A0A0;
   padding: 0 20px 10px 20px;
- /* border-top: 4px solid #aec62c;*/
- border-top: 4px solid #F84B00;
+  border-top: 4px solid #aec62c;
   margin-top: 20px;
   -webkit-box-shadow: 0 -1px 12px rgba(0,0,0,0.4);
   -moz-box-shadow: 0 -1px 12px rgba(0,0,0,0.4);
@@ -1291,60 +1562,3 @@ outline: 0;
 .dropdown.open a.dropdown-toggle .caret {
   border-top: 4px solid #FFF;
 }
-/*--*/
-.icon-google-plus,.icon-facebook,.icon-twitter,.icon-vimeo2,.icon-flickr,.icon-picassa,.icon-dribbble,.icon-github,.icon-wordpress,.icon-blogger,.icon-tumblr,.icon-soundcloud,.icon-linkedin,.icon-lastfm,.icon-stumbleupon,.icon-pinterest {
-	display: inline-block;
-	width: 16px;
-	height: 16px;
-	background-image: url(../img/icomoon-social.png);
-	background-repeat: no-repeat;
-}
-.icon-google-plus {
-	background-position: 0 0;
-}
-.icon-facebook {
-	background-position: -32px 0;
-}
-.icon-twitter {
-	background-position: -64px 0;
-}
-.icon-vimeo2 {
-	background-position: -96px 0;
-}
-.icon-flickr {
-	background-position: -128px 0;
-}
-.icon-picassa {
-	background-position: -160px 0;
-}
-.icon-dribbble {
-	background-position: -192px 0;
-}
-.icon-github {
-	background-position: -224px 0;
-}
-.icon-wordpress {
-	background-position: -256px 0;
-}
-.icon-blogger {
-	background-position: -288px 0;
-}
-.icon-tumblr {
-	background-position: -320px 0;
-}
-.icon-soundcloud {
-	background-position: -352px 0;
-}
-.icon-linkedin {
-	background-position: -384px 0;
-}
-.icon-lastfm {
-	background-position: -416px 0;
-}
-.icon-stumbleupon {
-	background-position: -448px 0;
-}
-.icon-pinterest {
-	background-position: -480px 0;
-}
-/****/
