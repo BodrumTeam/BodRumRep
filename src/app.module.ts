@@ -14,6 +14,9 @@ import { Home } from './home';
 import { Login } from './login';
 import { Signup } from './signup';
 import { OperationsComponent } from './home/operations/operations.component';
+import{ItemsComponent} from'./items/item.component';
+import{DetailComponent} from'./item details/detail.component';
+
 import { Header } from './header';
 import {Footer} from './footer';
 import {Profile} from './profile';
@@ -26,7 +29,8 @@ import { routes } from './app.routes';
   bootstrap: [App],
   declarations: [
     Home, Login, Signup, App, OperationsComponent, 
-    Header ,Footer ,Profile, ToolCategory, Needs
+    Header ,Footer ,Profile, ToolCategory, Needs, 
+    ItemsComponent, DetailComponent
   ],
 
   imports: [
