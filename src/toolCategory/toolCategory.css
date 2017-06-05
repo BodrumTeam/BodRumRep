@@ -20,7 +20,7 @@
 }
 
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
-    background-color: #aec62c;
+    background-color: #FF7373;
     color: #fff;
 }
 
@@ -570,6 +570,7 @@ a:hover {
 .pricing-plan:hover {
   -webkit-box-shadow: 0 0 8px #333;
   -moz-box-shadow: 0 0 8px #333;
+
   box-shadow: 0 0 8px #333;
   color: 0 0 8px #333;
   z-index: 5;
@@ -606,7 +607,7 @@ a:hover {
   font-size: 19px;
   font-weight: bold;
   color: white;
-  background: #595f6b;
+  background: #ddd;
   -webkit-border-radius: 45px;
   -webkit-background-clip: padding-box;
   -moz-border-radius: 45px;
@@ -677,7 +678,7 @@ a:hover {
   color: 0px 0px 3px rgba(0,0,0,0.3);
 }
 .ribbon-green {
-  background-color: #BFDC7A;
+  background-color: #FF9013;
 }
 .ribbon-blue {
   background-color: #5ACBFF;
@@ -724,7 +725,8 @@ a:hover {
     background-clip: padding-box;
   }
   .pricing-plan-promote {
-    background: #aec62c;
+    /*background: #FF9013;*/
+    background: #FF9013;
     padding: 40px;
     margin-top: 0;
     -webkit-border-radius: 7px;
@@ -768,7 +770,7 @@ a:hover {
   font-size: 19px;
   font-weight: bold;
   color: white;
-  background: #687b00;
+  background: #a8aab1;
   -webkit-border-radius: 45px;
   -webkit-background-clip: padding-box;
   -moz-border-radius: 45px;
@@ -1396,9 +1398,9 @@ border:none;
 +	Breadcrumbs Section Style
 --------------------------------------------------------------------------*/
 .section-breadcrumbs {
-  background: #aec62c;
+  /*background: #FF9013;*/
   margin-bottom: 10px;
-  margin-top:90px;
+  margin-top:45px;
 }
 .section-breadcrumbs h1 {
   color: #FFF;
@@ -1553,7 +1555,7 @@ border:none;
 +	Buttons Style
 --------------------------------------------------------------------------*/
 .btn {
-  border: 1px solid #aec62c;
+  border: 1px solid #FF9013;
   -webkit-border-radius: 2px;
   -webkit-background-clip: padding-box;
   -moz-border-radius: 2px;
@@ -1569,7 +1571,7 @@ border:none;
   -ms-transition: all .25s ease;
   transition: all .25s ease;
   text-align: center;
-  background: none repeat scroll 0 0 #aec62c;
+  background: none repeat scroll 0 0 #FF9013;
   text-shadow: none;
   box-shadow: none;
   color: #FFF;
@@ -1629,9 +1631,10 @@ outline: 0;
   border: 1px solid #d45d00;
 }
 .btn-green {
-  border: 1px solid #4c5818;
-  color: #FFF;
-  background: none repeat scroll 0 0 #6E8023;
+  border: 2px solid #d45d00;
+  color: #F84B00;
+  font-style: bold;
+  background: none repeat scroll 0 0 #ddd;
 }
 .btn-green:hover {
   background: none repeat scroll 0 0 #3b3c41;
