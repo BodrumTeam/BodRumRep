@@ -16,6 +16,7 @@ import { Signup } from './signup';
 import { OperationsComponent } from './home/operations/operations.component';
 import{ ItemsComponent } from './items/item.component';
 import{ DetailComponent } from './item details/detail.component';
+import { PeopleTalkComponent } from './home/peopleTalk/peopleTalk.component';
 
 import { Header } from './header';
 import { Footer } from './footer';
@@ -28,7 +29,7 @@ import { routes } from './app.routes';
 @NgModule({
   bootstrap: [App],
   declarations: [ 
-    Home, Login, Signup, App, OperationsComponent, Header,
+    Home, Login, Signup, App, OperationsComponent, Header, PeopleTalkComponent,
     Footer, Profile, ToolCategory, Needs, ItemsComponent, DetailComponent ],
   imports: [
     HttpModule, BrowserModule, FormsModule,
