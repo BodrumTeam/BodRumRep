@@ -5,9 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
 import { AUTH_PROVIDERS } from 'angular2-jwt';
-
 import { AuthGuard } from './common/auth.guard';
-
 // Components
 import { App } from './app';
 import { Home } from './home';
@@ -29,17 +27,13 @@ import { routes } from './app.routes';
   bootstrap: [App],
   declarations: [
 
-        Home, Login, Signup, App , Header , Footer, ItemsComponent, DetailComponent,
-        Profile ,ToolCategory,Needs
-
-      ,Profile, ToolCategory, Needs, 
-    ItemsComponent, DetailComponent
-
+        Home, Login, Signup, App, Header, Footer, ItemsComponent, DetailComponent,
+        Profile ,ToolCategory, Needs    
   ],
 
   imports: [
     HttpModule, BrowserModule, FormsModule,
-    RouterModule.forRoot(routes, {
+    RouterModule.forRoot(routes,{
       useHash: true
     })
   ],
