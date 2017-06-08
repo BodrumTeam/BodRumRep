@@ -20,6 +20,8 @@ export const routes: Routes = [
   { path: 'detail',   component: DetailComponent },
   { path: 'profile',  component: Profile },
   { path: 'toolCategory', component: ToolCategory },
+  
+  
   { path: 'needs', component: Needs},
   { path: '**', component: Login }
 ];
