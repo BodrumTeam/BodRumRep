@@ -12,24 +12,23 @@ import { Home } from './home';
 import { Login } from './login';
 import { Signup } from './signup';
 import { OperationsComponent } from './home/operations/operations.component';
-import{ItemsComponent} from'./items/item.component';
-import{DetailComponent} from'./item details/detail.component';
+import{ ItemsComponent } from './items/item.component';
+import{ DetailComponent } from './item details/detail.component';
+import { PeopleTalkComponent } from './home/peopleTalk/peopleTalk.component';
 
 import { Header } from './header';
-import {Footer} from './footer';
-import {Profile} from './profile';
-import {ToolCategory} from './toolCategory';
+import { Footer } from './footer';
+import { Profile } from './profile';
+import { ToolCategory } from './toolCategory';
 import { Needs } from './needs';
 
 import { routes } from './app.routes';
 
 @NgModule({
   bootstrap: [App],
-  declarations: [
-
-        Home, Login, Signup, App, Header, Footer, ItemsComponent, DetailComponent,
-        Profile ,ToolCategory, Needs    
-  ],
+  declarations: [ 
+    Home, Login, Signup, App, OperationsComponent, Header, PeopleTalkComponent,
+    Footer, Profile, ToolCategory, Needs, ItemsComponent, DetailComponent ],
 
   imports: [
     HttpModule, BrowserModule, FormsModule,
@@ -42,4 +41,3 @@ import { routes } from './app.routes';
   ]
 })
 export class AppModule {}
-
