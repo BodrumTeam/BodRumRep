@@ -17,7 +17,7 @@ import { OperationsComponent } from './home/operations/operations.component';
 import{ ItemsComponent } from './items/item.component';
 import{ DetailComponent } from './item details/detail.component';
 import { PeopleTalkComponent } from './home/peopleTalk/peopleTalk.component';
-
+import { SiteDescComponent } from './home/siteDescription/siteDesc.component';
 import { Header } from './header';
 import { Footer } from './footer';
 import { Profile } from './profile';
@@ -30,7 +30,8 @@ import { routes } from './app.routes';
   bootstrap: [App],
   declarations: [ 
     Home, Login, Signup, App, OperationsComponent, Header, PeopleTalkComponent,
-    Footer, Profile, ToolCategory, Needs, ItemsComponent, DetailComponent ],
+    Footer, Profile, ToolCategory, Needs, ItemsComponent, DetailComponent,
+    SiteDescComponent ],
   imports: [
     HttpModule, BrowserModule, FormsModule,
     RouterModule.forRoot(routes, {
