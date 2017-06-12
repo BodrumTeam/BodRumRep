@@ -26,6 +26,9 @@ import { Needs } from './needs';
 
 import { routes } from './app.routes';
 
+//----------------------Services--------------------------
+import{NeedsService}from './services/needs.service'
+
 @NgModule({
   bootstrap: [App],
   declarations: [ 
@@ -38,7 +41,7 @@ import { routes } from './app.routes';
     })
   ],
   providers: [
-    AuthGuard, ...AUTH_PROVIDERS
+    AuthGuard,NeedsService, ...AUTH_PROVIDERS
   ]
 })
 export class AppModule {}
