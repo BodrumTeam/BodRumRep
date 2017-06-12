@@ -16,7 +16,8 @@ export class NeedsService{
    
     constructor(private http:Http ){}
 
-    getAllNeeds(){
+    getAllNeeds(){ 
+        
        return  this.http.get("http://localhost:7919/rpc/needs/getAll").map(data=>data.json());
      }
 
