@@ -10,7 +10,7 @@ import { AuthGuard } from './common/auth.guard';
 
 // Components
 import { App } from './app';
-import { Home } from './home';
+import { HomeComponent } from './home';
 import { Login } from './login';
 import { Signup } from './signup';
 import { OperationsComponent } from './home/operations/operations.component';
@@ -32,7 +32,7 @@ import{NeedsService}from './services/needs.service'
 @NgModule({
   bootstrap: [App],
   declarations: [ 
-    Home, Login, Signup, App, OperationsComponent, Header, PeopleTalkComponent,
+    HomeComponent, Login, Signup, App, OperationsComponent, Header, PeopleTalkComponent,
     Footer, Profile, ToolCategory, Needs, ItemsComponent, DetailComponent,
     SiteDescComponent ],
   imports: [
