@@ -18,7 +18,7 @@ export class Login {
   login(event, username, password) {
     event.preventDefault();
     let body = JSON.stringify({ username, password });
-    this.http.post('http://localhost:3001/sessions/create', body, { headers: contentHeaders })
+    this.http.post('http://localhost:7919/rpc/account/login', body, { headers: contentHeaders })
       .subscribe(
         response => {
           localStorage.setItem('id_token', response.json().id_token);

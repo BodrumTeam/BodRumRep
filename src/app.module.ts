@@ -16,6 +16,8 @@ import{ ItemsComponent } from './items/item.component';
 import{ DetailComponent } from './item details/detail.component';
 import { PeopleTalkComponent } from './home/peopleTalk/peopleTalk.component';
 
+import { ItemService } from './services/item.service';
+
 import { Header } from './header';
 import { Footer } from './footer';
 import { Profile } from './profile';
@@ -37,7 +39,7 @@ import { routes } from './app.routes';
     })
   ],
   providers: [
-    AuthGuard, ...AUTH_PROVIDERS
+    AuthGuard,ItemService, ...AUTH_PROVIDERS
   ]
 })
 export class AppModule {}
