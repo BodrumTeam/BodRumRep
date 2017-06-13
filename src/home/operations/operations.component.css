@@ -10,7 +10,7 @@ body {
   transform: translateZ(0);
 }
 .section-white {
-  background: #FFF;
+  background: #fcfcfc;
 }
 .section-dark {
   background: #151515;

@@ -11,7 +11,7 @@ const template = require('./home.html');
   template: template,
   styles: [ styles ]
 })
-export class Home {
+export class HomeComponent {
   jwt: string;
   decodedJwt: string;
   response: string;
