@@ -16,12 +16,7 @@
     "src/header/index.ts",
     "src/items/item.component.ts",
     "src/item details/detail.component.ts",
-<<<<<<< HEAD
-=======
-     "src/models/INeeds.ts",
-
-    
->>>>>>> 785f263ec7d6c64f08da5b8523d992707b08e417
+    "src/models/INeeds.ts",
     "src/footer/index.ts",
     "src/profile/index.ts",
     "src/toolCategory/index.ts",
