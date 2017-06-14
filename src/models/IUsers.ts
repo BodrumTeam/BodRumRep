@@ -4,7 +4,7 @@ export interface IUsers{
         name: string,
         email: string,
         password: string,
-        photo:string,
+        Photo:string,
         username:string,
         fk_cityId:number,
         fk_countryId:number,
