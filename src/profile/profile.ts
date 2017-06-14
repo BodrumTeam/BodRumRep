@@ -1,6 +1,12 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ActivatedRoute } from "@angular/router";
+ 
+import {ProfileService} from '../services/profile.service';
+import {ItemService} from '../services/item.service';
+import { IUsers } from '../models/IUsers';
+import {IITem} from '../models/IItems'
+import { ActivatedRoute,Route } from '@angular/router';
+
 const styles = require('./profile.css');
 const template = require('./profile.html');
 
@@ -10,14 +16,21 @@ const template = require('./profile.html');
   template: template,
   styles: [ styles ]
 })
-export class Profile {
-   userId : Number;
-    constructor(private aRoute:ActivatedRoute){}
-    
-    
+
+export class ProfileComponent implements OnInit {
+    constructor(private x:ProfileService,private xx:ActivatedRoute,private y:ItemService) {}
+    user:IUsers;
+    item:Array<IITem>;
+    username:string;
     ngOnInit(){
-        this.userId = this.aRoute.snapshot.params['userId'];
-        alert(this.userId);
-        
-    }
+        this.username=this.xx.snapshot.params['username'];
+       //alert('kkk');
+       //alert("aaa : " + this.userId);
+       alert(this.username);
+       this.x.GetUserByUsername(this.username).subscribe(data=>{this.user=data; alert(this.user)});
+       this.y.getAllItems().subscribe(data=>{this.item=data;console.log(this.item)});
+      
+    // this.id2 =this.xx.snapshot.params['itemId'];
+    // this.y.GetItemById(this.id2).subscribe(data=>this.item=data);
+}
 }

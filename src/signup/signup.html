@@ -1,6 +1,13 @@
+<br/><br/><br/><br/><br/>
+
 <div class="signup center-block jumbotron">
   <h1>Signup</h1>
-  <form role="form" (submit)="signup($event, username.value, password.value)">
+  <!--   -->
+  <form  role="form" (submit)="signup($event ,name.value , username.value, password.value , email.value , age.value , mobile.value , optradio )">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input  type="text" #name class="form-control" id="name" placeholder="Name">
+  </div>
   <div class="form-group">
     <label for="username">Username</label>
     <input type="text" #username class="form-control" id="username" placeholder="Username">
@@ -9,6 +16,41 @@
     <label for="password">Password</label>
     <input type="password" #password class="form-control" id="password" placeholder="Password">
   </div>
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" #email class="form-control" id="email" placeholder="Email">
+  </div>
+  <div class="form-group">
+    <label for="age">Age</label>
+    <input type="number" min="10" max="90" #age class="form-control" id="age" placeholder="Age">
+  </div>
+  <div class="form-group">
+    <label for="mobile">Mobile</label>
+    <input type="number" min="0" maxlength="11" #mobile class="form-control" id="mobile" placeholder="Mobile">
+  </div>
+  <div >
+  <label class="radio-inline">
+      <input type="radio" value="male" [(ngModel)]="gender" name="optradio">Male
+    </label>
+    <label class="radio-inline">
+      <input type="radio" value="female" [(ngModel)]="gender" name="optradio">Female
+    </label>
+  </div>
+  <div class="form-group" >
+  <select [(ngModel)]="fk_countryId" name="country" class="form-control" (change)="onSelectCountry($event.target.value)"  >
+  <option hidden value="0">Select Country</option>
+  <option *ngFor="let country of countries" value="{{country.id}}">{{country.name}}</option>
+  </select>
+ <select [(ngModel)]="fk_cityId" name="city" class="form-control"  (change)="onSelectCity($event.target.value)">
+  <option hidden *ngIf='selectedCountry.id==0' value="0" >Select City</option>
+  <option *ngFor="let city of newCities" value="{{city.Id}}">{{city.Name}}</option>
+ </select>
+ <select [(ngModel)]="fk_regionId" name="region" class="form-control">
+  <option hidden *ngIf='selectedCity.Id==0' value="0">Select Region</option>
+  <option *ngFor="let region of newRegiones" value="{{region.Id}}">{{region.Name}}</option>  
+ </select>
+</div>
+  
   <button type="submit" class="btn btn-default">Submit</button>
 </form>
 </div>

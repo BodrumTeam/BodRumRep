@@ -5,8 +5,6 @@ import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/toPromise';
 import{INeeds}from '../models/INeeds'
 
-
-
 @Injectable()
 export class NeedsService{
 
@@ -23,16 +21,31 @@ export class NeedsService{
 
 
 
-    createNeeds( description:string):PromiseLike<INeeds> {
+    addNeeds( description:string) {
         let body = JSON.stringify({ 
                                 description:description});
         
-        return this.http.post(this._baseUrl+'/needs', body, {headers:this.headers})
-                .toPromise()
-                .then(res=>res.json().data )
-                .catch(this.handleError)
+        return this.http.post('http://localhost:7919/rpc/needs/addNeed', body, {headers:this.headers})
+                .map(res=>res.json());
     }
     
+
+    updateNeed(need:INeeds){
+        let headers = new Headers();
+        headers.append('Content-type','application/json');
+        return this.http.put('' + need.id ,JSON.stringify(need) ,{headers:headers}).map(res=>res.json());
+    }
+
+
+   deleteNeed(id:any){
+      return this.http.delete("http://localhost:7919/rpc/needs/delete/" + id).map(res=>res.json());
+
+   }
+ 
+   
+
+
+
 
 
     private handleError(error: any) {
