@@ -28,7 +28,7 @@ import { routes } from './app.routes';
 import { NeedsService } from './services/needs.service';
 import { ItemService } from './services/item.service';
 import { LocationService } from './services/location.service';
-import { ProfileService}  from './services/profile.service';
+import { ProfileService }  from './services/profile.service';
 
 
 

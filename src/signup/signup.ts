@@ -8,7 +8,6 @@ import{LocationService}from '../services/location.service'
 import{Country}from '../models/Country'
 import{City}from '../models/City'
 import{Region}from '../models/Region'
-import{User}from '../models/User'
 import {Observable} from 'rxjs/Observable';
 
 const styles   = require('./signup.css');
