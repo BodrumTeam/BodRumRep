@@ -15,11 +15,9 @@ export const routes: Routes = [
   { path: 'signup', component: Signup },
   { path: 'home',   component: HomeComponent },
   { path: 'items',   component: ItemsComponent },
-  { path: 'detail',   component: DetailComponent },
+  { path: 'item/:id',   component: DetailComponent},
   { path: 'profile/:username',  component: ProfileComponent },
   { path: 'toolCategory', component: ToolCategory },
-  
-  
   { path: 'needs', component: Needs},
   { path: '**', component: HomeComponent }
 ];

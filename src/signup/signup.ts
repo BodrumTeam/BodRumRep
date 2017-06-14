@@ -8,7 +8,10 @@ import{LocationService}from '../services/location.service'
 import{Country}from '../models/Country'
 import{City}from '../models/City'
 import{Region}from '../models/Region'
+<<<<<<< HEAD
 
+=======
+>>>>>>> 913f77aa141caad863c14816749057ff1df65f72
 import {Observable} from 'rxjs/Observable';
 
 const styles   = require('./signup.css');
