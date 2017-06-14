@@ -10,7 +10,6 @@ export class ItemService {
         return this.http.get("http://localhost:7919/rpc/item/getAll").map(data => data.json());         
     }
     getItemById(id: number) {
-        console.log(id);
-        return this.http.get(`http://localhost:7919/rpc/item/getbyid/${id}`).map( data =>{ console.log(data.json());return data.json();});
+        return this.http.get(`http://localhost:7919/rpc/item/getbyid/${id}`).map( data =>data.json());
     }
 }
