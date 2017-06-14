@@ -1,3 +1,17 @@
+#f1{
+        margin-top: 12px
+}
+#in{
+        border-radius: 5px;
+        color:orange;
+}
+#a1{
+        color: black;
+}
+#lgn{
+        margin-left: 10px;
+    margin-right: 5px;
+}
 .navbar-default {
     background-color: #FFF;
     border-color: #CCC;
@@ -21,7 +35,7 @@
     color: #fff;
 }
 .basic-nav {
-   margin-left: 20%;
+   margin-left: 0%;
 }
 
 /*@media (min-width: 767px){

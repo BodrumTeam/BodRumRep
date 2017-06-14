@@ -10,15 +10,22 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav basic-nav">
-        <li class="active"><a href="#">Home</a></li>
+        <li class="active" style="margin-left: 26px"><a href="#">Home</a></li>
         <li><a href="#" [routerLink]="['/toolCategory']">Tools' Category</a></li>
         <li><a href="#" [routerLink]="['/needs']">Needs</a></li>
         <li><a href="#">About Us</a></li>
         <li><a href="#">Contact Us</a></li>
       </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#" [routerLink]="['/signup']"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="#" [routerLink]="['/login']"><span class="glyphicon glyphicon-log-in" ></span> Login</a></li>
+      <form [hidden]="userLoged" role="form" (submit)="login($event, username.value, password.value)" id="f1">
+        <input  type="text" style="width: 200px;" #username id="username" placeholder="Username" id="in">
+        <input  type="password"style="width: 200px;margin-left:1em;" #password  id="password" placeholder="Password" id="in">  
+        <button type="submit" id="lgn"><span class="glyphicon glyphicon-user"></span>Login</button>
+         <button><a href="#" [routerLink]="['/signup']" id="a1"><span class="glyphicon glyphicon-user"></span>Sign Up</a></button>
+      </form>
+      <ul class="nav navbar-nav">
+        <li><a href="#" *ngIf="userLoged" style="margin-left: 70px;" [routerLink]="['/profile',curUsername]"><span class="glyphicon glyphicon-log-out" ></span>Profile</a></li>
+        <li><a href="#" *ngIf="userLoged" [routerLink]="['/home']"><span class="glyphicon glyphicon-log-in" ></span> Notification</a></li>
+        <li><a href="#" *ngIf="userLoged" (click)="logout()"><span class="glyphicon glyphicon-log-out" ></span> Logout</a></li>
       </ul>
     </div>
   </div>

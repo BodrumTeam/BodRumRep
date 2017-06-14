@@ -11,7 +11,6 @@
     "typings/tsd.d.ts",  
     "src/app.ts",
     "src/home/index.ts",
-    "src/login/index.ts",
     "src/signup/index.ts",
     "src/header/index.ts",
     "src/items/item.component.ts",

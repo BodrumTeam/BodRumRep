@@ -1,106 +1,56 @@
-<div class="section section-breadcrumbs">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<h1 id="hi">Hello UserName</h1>
-					</div>
+<div class="section section-breadcrumbs" style="margin-top:50px">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h1 *ngIf="user" id="hi">Hello {{user.username}}</h1>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--<div class="section" id="div1"  *ngIf="user">-->
+<div class="section" id="div1">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12" id="cont">
+				<h2 class="info">Personal Information</h2><span class="glyphicon glyphicon-edit" id="ic"></span><br/><br/><br/>
+				<div id="con">
+					<h4 class="personal">Name </h4>
+					<h5 *ngIf="user" class="details">{{user.name}}</h5><br/>
+					<h4 class="personal">Email</h4>
+					<h5 *ngIf="user" class="details">{{user.email}}</h5><br/>
+					<h4 class="personal">Age</h4>
+					<h5 *ngIf="user" class="details" style="margin-left: 45px;">{{user.age}}</h5><br/>
+					<h4 class="personal">Phone </h4>
+					<h5 *ngIf="user" class="details" id='spe'>{{user.mobile}}</h5><br/>
+					<h4 class="personal">Address</h4>
+					<h5 *ngIf="user" id='spe2'> {{user.regionName}} , {{user.cityName}} , {{user.countryName}}</h5><br/>
 				</div>
 			</div>
 		</div>
-		
-        <div class="section" id="div1">
-	    	<div class="container">
-				<div class="row">
-				<div class="col-sm-12" id="cont">
-						<h2  class="info">Personal Information</h2><span class="glyphicon glyphicon-edit" id="ic"></span><br/><br/><br/>
-						<h4 class="personal">Name </h4><h5 class="details">Yasmin Tarek</h5><br/>
-						<h4 class="personal">Email</h4><h5 class="details">Yasmin Tarek</h5><br/>
-						<h4 class="personal">Phone </h4><h5 class="details" id='spe'>Yasmin Tarek</h5><br/>
-						<h4 class="personal">Mobile </h4><h5 class="details" id='spe'>Yasmin Tarek</h5><br/>
-						<h4 class="personal">Address</h4><h5 id='spe2'>Yasmin Tarek</h5><br/>
-						
-					
-					</div>
-				</div>
-			</div>
-		</div>		  
-        <div>
-			<div id="div2"></div>
-		</div>
-       <span class="glyphicon glyphicon-plus" id="add"></span>
-        <div class="section">
-	    	<div class="container">
-				<div class="row">
-			
-			<ul class="grid cs-style-2">
-	        	<div class="col-md-4 col-sm-6">
-					<figure>
-						<img src="/src/Photos/4.jpg" alt="img04">
-						<figcaption>
-							<h3>Settings</h3>
-							<span>Jacob Cummings</span>
-							<a href="portfolio-item.html">Take a look</a>
-						</figcaption>
-					</figure>
-	        	</div>	
-				<div class="col-md-4 col-sm-6">
-					<figure>
-						<img src="/src/Photos/1.jpg" alt="img01">
-						<figcaption>
-							<h3>Camera</h3>
-							<span>Jacob Cummings</span>
-							<a href="portfolio-item.html">Take a look</a>
-						</figcaption>
-					</figure>
-				</div>
-				<div class="col-md-4 col-sm-6">
-					<figure>
-						<img src="/src/Photos/2.jpg" alt="img02">
-						<figcaption>
-							<h3>Music</h3>
-							<span>Jacob Cummings</span>
-							<a href="portfolio-item.html">Take a look</a>
-						</figcaption>
-					</figure>
-				</div>
-				<div class="col-md-4 col-sm-6">
-					<figure>
-						<img src="/src/Photos/5.jpg" alt="img05">
-						<figcaption>
-							<h3>Safari</h3>
-							<span>Jacob Cummings</span>
-							<a href="portfolio-item.html">Take a look</a>
-						</figcaption>
-					</figure>
-				</div>
-				<div class="col-md-4 col-sm-6">
-					<figure>
-						<img src="/src/Photos/3.jpg" alt="img03">
-						<figcaption>
-							<h3>Phone</h3>
-							<span>Jacob Cummings</span>
-							<a href="portfolio-item.html">Take a look</a>
-						</figcaption>
-					</figure>
-				</div>
-				<div class="col-md-4 col-sm-6">
-					<figure>
-						<img src="/src/Photos/6.jpg" alt="img06">
-						<figcaption>
-							<h3>Game Center</h3>
-							<span>Jacob Cummings</span>
-							<a href="portfolio-item.html">Take a look</a>
+	</div>
+</div>
+<div>
+	<div id="div2" *ngIf="user" [ngStyle]="{'background-image':'url(' + user.photo + ')','background-size':'cover'}"></div>
+</div>
+<span class="glyphicon glyphicon-plus" id="add"></span>
+<div class="section">
+	<div class="container">
+		<div class="row" *ngIf="user">
+				<ul class="grid cs-style-2" *ngIf="item">
+				<div class="col-md-4 col-sm-6"  >
+					<figure *ngFor='let items of item' style="display:inline-block">
+						<img [src]='items.Photo'/>
+						<figcaption id="im">
+
 						</figcaption>
 					</figure>
 				</div>
 			</ul>
-
-				
-				</div>
-				
-				<ul class="pager">
-				  <li><a href="#" id="see">See More</a></li>
-				</ul>
-				
-			</div>
 		</div>
+	</div>
+	<ul class="pager">
+		<li><a href="#" id="see">See More</a></li>
+	</ul>
+
+</div>
