@@ -6,6 +6,9 @@
 	background:#111;
 }
 
+.img-thumbnail{
+  border: 0;
+}
 @media(min-width:767px) {
     .navbar {
         padding: 20px 0;
@@ -330,6 +333,48 @@
 --------------------------------------------------------------------------*/
 body {
   background: #FFFFFF;
+  overflow-x:hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+.contimg:hover .image {
+  opacity: 0.3;
+}
+
+.contimg:hover .middle {
+  opacity: 1;
+}
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+.contimg{
+  position: relative;
+    width: 50%;
+}
+.text {
+  background-color: #F84B00;
+  color: white;
+  font-size: 13px;
+  padding: 4px 4px;
+}
+#contfig{
+  margin-left:250px; 
+  width:100px;
+  height: 50px;
 }
 .section {
   padding: 30px 0;
@@ -1345,15 +1390,18 @@ border:none;
 +	Breadcrumbs Section Style
 --------------------------------------------------------------------------*/
 .section-breadcrumbs {
-  background: #F84B00;
+  background:white;
   margin-bottom: 10px;
-  margin-top:90px;
+  margin-top:40px;
+  width: 24%;
+  margin-left: 0;
 }
 .section-breadcrumbs h1 {
-  color: #FFF;
-  font-size: 28px;
+  color: #F84B00;
+  font-size: 26px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   text-transform: uppercase;
-  margin-bottom: 0;
+  margin-bottom: 10px;
 }
 @media(max-width:767px) {
 .section-breadcrumbs {

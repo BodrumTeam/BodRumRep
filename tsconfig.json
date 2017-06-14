@@ -15,16 +15,15 @@
     "src/header/index.ts",
     "src/items/item.component.ts",
     "src/item details/detail.component.ts",
-     "src/models/INeeds.ts",
-
-    
+    "src/models/INeeds.ts",
     "src/footer/index.ts",
     "src/profile/index.ts",
     "src/toolCategory/index.ts",
     "src/needs/index.ts",
     "src/index.ts",
     "src/common/headers.ts",
-    "src/common/auth.guard.ts"
+    "src/common/auth.guard.ts",
+    "src/home/operations/operations.component.ts"
   ],
     "filesGlob": [
     "./src/**/*.ts",
