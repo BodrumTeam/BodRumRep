@@ -1,67 +1,70 @@
-		<div class="section section-breadcrumbs">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<h1>Tool Details</h1>
-					</div>
-				</div>
+<div class="section section-breadcrumbs">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h1>Tool Details</h1>
 			</div>
 		</div>
-        
-        <div class="section">
-	    	<div class="container">
-	    		<div class="row">
-	    			<!-- Product Image & Available Colors -->
-	    			<div class="col-sm-6">
-	    				<div class="product-image-large">
-	    					<img src="src\items\img\6.jpg" alt="Item Name">
-	    				</div>
-	    				<div class="colors">
-							<span class="color-white"></span>
-							<span class="color-black"></span>
-							<span class="color-blue"></span>
-							<span class="color-orange"></span>
-							<span class="color-green"></span>
-						</div>
-						<h3>Tool Description</h3>
-	    				<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim ornare nisi, vitae mattis nulla ante id dui. 	    				
-						</p>
-	    			</div>
-	    			<!-- End Product Image & Available Colors -->
-	    			<!-- Product Summary & Options -->
-	    			<div class="col-sm-6 product-details">
-	    				<h2>Tool Name</h2>						
+	</div>
+</div>
+
+<div class="section">
+	<div class="container">
+		<div class="row" *ngIf="item">
+			<!-- Just for test -->
+			<!--Showing product details for product: {{item.id}}-->
+			<div>
+				<!-- Product Image & Available Colors -->
+				<div class="col-sm-6 col-xs-12">
+					<div class="product-image-large">
+						<!--<img src="src\items\img\6.jpg" alt="Item Name">-->
+						<img [src]="item.photo" alt="Item Name">
+					</div>
+					<h3>Tool Description</h3>
+					<p>
+						<!--Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.
+					Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis
+					enim ornare nisi, vitae mattis nulla ante id dui.-->
+						{{item.description}}
+					</p>
+				</div>
+				<!-- End Product Image & Available Colors -->
+				<!-- Product Summary & Options -->
+				<div class="col-sm-6">
+					<div class="product-details">
+						<h2>{{item.title}}</h2>
 						<h3>Tool Details</h3>
-						<p><strong>Price: </strong>333$</p>
-						<p><strong>Model: </strong>2015</p>
+						<p><strong>Price: </strong>{{item.price | currency: "EGY": 1.2 }}</p>
+						<!--<p><strong>Model: </strong>2015</p>-->
 						<h3>Owner Details</h3>
-						<p><strong>ownew Name: </strong>Kireya Atef</p>
+						<p><strong>owner Name: </strong>Kireya Atef</p>
 						<p><strong>owner Mobile: </strong>01223456443</p>
 						<p><strong>owner Email: </strong>KireyaAtef@gmail.com</p>
 						<p><strong>owner Address: </strong>Nasr city, Cairo,Egypt.</p>
 						<h3>Contact with the Owner</h3>
-						 <form>
-                            <div class="form-group">
-                              <label for="comment">Send a Message</label>
-                              <textarea class="form-control" rows="3" id="comment" placeholder="Write your message..."></textarea>
-                            </div>
-                          </form>
-						  <button type="button" class="btn btn-warning">Send</button>
-	    			</div>
-	    			<!-- End Product Summary & Options -->	    			
-	    		</div>
+					</div>
+					<form>
+						<div class="form-group">
+							<label for="comment">Send a Message</label>
+							<textarea class="form-control" rows="3" id="comment" placeholder="Write your message..."></textarea>
+						</div>
+					</form>
+					<button type="button" class="btn btn-warning">Send</button>
+				</div>
 			</div>
-		</div>		
-<hr>		
-        <div class="section">
-	    	<div class="container">
-				<div class="row">				
-				<div class="section-title">
+			<!-- End Product Summary & Options -->
+		</div>
+	</div>
+</div>
+<hr>
+<div class="section">
+	<div class="container">
+		<div class="row">
+			<div class="section-title">
 				<h1>Similar Tools</h1>
-				</div>							
+			</div>
 			<ul class="grid cs-style-2">
-	        	<div class="col-md-3 col-sm-6">
+				<div class="col-md-3 col-sm-6">
 					<figure>
 						<img src="src\items\img\4.jpg" alt="img04">
 						<figcaption>
@@ -70,7 +73,7 @@
 							<a href="portfolio-item.html">Take a look</a>
 						</figcaption>
 					</figure>
-	        	</div>	
+				</div>
 				<div class="col-md-3 col-sm-6">
 					<figure>
 						<img src="src\items\img\1.jpg" alt="img01">
@@ -101,7 +104,7 @@
 						</figcaption>
 					</figure>
 				</div>
-			</ul>				
-				</div>				 
-			</div>						
+			</ul>
 		</div>
+	</div>
+</div>

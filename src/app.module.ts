@@ -15,13 +15,8 @@ import { OperationsComponent } from './home/operations/operations.component';
 import{ ItemsComponent } from './items/item.component';
 import{ DetailComponent } from './item details/detail.component';
 import { PeopleTalkComponent } from './home/peopleTalk/peopleTalk.component';
-<<<<<<< HEAD
 
-import { ItemService } from './services/item.service';
-
-=======
 import { SiteDescComponent } from './home/siteDescription/siteDesc.component';
->>>>>>> 785f263ec7d6c64f08da5b8523d992707b08e417
 import { Header } from './header';
 import { Footer } from './footer';
 import { Profile } from './profile';
@@ -31,20 +26,16 @@ import { Needs } from './needs';
 import { routes } from './app.routes';
 
 //----------------------Services--------------------------
-import{NeedsService}from './services/needs.service'
+import{ NeedsService } from './services/needs.service';
+import { ItemService } from './services/item.service';
+
 
 @NgModule({
   bootstrap: [App],
   declarations: [ 
-<<<<<<< HEAD
-    Home, Login, Signup, App, OperationsComponent, Header, PeopleTalkComponent,
-    Footer, Profile, ToolCategory, Needs, ItemsComponent, DetailComponent ],
-
-=======
     HomeComponent, Login, Signup, App, OperationsComponent, Header, PeopleTalkComponent,
     Footer, Profile, ToolCategory, Needs, ItemsComponent, DetailComponent,
     SiteDescComponent ],
->>>>>>> 785f263ec7d6c64f08da5b8523d992707b08e417
   imports: [
     HttpModule, BrowserModule, FormsModule,
     RouterModule.forRoot(routes,{
@@ -52,11 +43,8 @@ import{NeedsService}from './services/needs.service'
     })
   ],
   providers: [
-<<<<<<< HEAD
-    AuthGuard,ItemService, ...AUTH_PROVIDERS
-=======
-    AuthGuard,NeedsService, ...AUTH_PROVIDERS
->>>>>>> 785f263ec7d6c64f08da5b8523d992707b08e417
+    AuthGuard, ItemService, ...AUTH_PROVIDERS,
+    AuthGuard, NeedsService, ...AUTH_PROVIDERS
   ]
 })
 export class AppModule {}

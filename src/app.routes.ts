@@ -17,7 +17,8 @@ export const routes: Routes = [
   { path: 'signup', component: Signup },
   { path: 'home',   component: HomeComponent },
   { path: 'items',   component: ItemsComponent },
-  { path: 'detail',   component: DetailComponent },
+  // { path: 'detail',   component: DetailComponent },
+  { path: 'item/:id',   component: DetailComponent},
   { path: 'profile/:userId',  component: Profile },
   { path: 'toolCategory', component: ToolCategory },
   
