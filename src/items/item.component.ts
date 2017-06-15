@@ -18,24 +18,24 @@ const template = require('./item.component.html');
   styles: [ styles ],
 })
 
-export class ItemsComponent implements OnInit , OnDestroy{
+export class ItemsComponent implements OnInit , OnDestroy {
   items : Array<IITem> ;
   subc : any;
   hamada = "ay7aga";
   
   constructor(private itemService: ItemService, public router: Router, public http: Http) {}
   ngOnInit(): void {
-    this.subc = this.itemService.getAllItems().subscribe(data=>
-                this.items=data,error=>console.log(error),
-                ()=>console.log(`completed : ${this.items[0].photo} 
-                ${this.items[0].description}` ));    
+    this.subc = this.itemService.getAllItems().subscribe(data=>this.items=data);    
+    // this.subc = this.itemService.getAllItems().subscribe(data=>
+    //             this.items=data,error=>console.log(error),
+    //             ()=>alert(this.items[0].date));    
   }
   ngOnDestroy(): void {
     this.subc.unsubscribe();
   }
 
-  selectbyid(item:IITem){
-        this.router.navigate(['item',item.id]);
+  selectbyid(item: IITem){
+        this.router.navigate(['item', item.id]);
   }
 
   isError: boolean = false;

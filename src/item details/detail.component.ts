@@ -16,9 +16,9 @@ const template = require('./detail.component.html');
     styles: [styles]
 })
 export class DetailComponent implements OnInit, OnDestroy {
-    private sub: any;
     item: IITem;
     id: number;
+    private sub: any;
     constructor(public router: Router, private actRoute: ActivatedRoute,
         private itemService: ItemService, public http: Http) { }
     ngOnInit() {
