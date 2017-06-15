@@ -1,6 +1,6 @@
 import { Component,OnInit } from '@angular/core';
 import { Router } from '@angular/router';
- 
+
 import {ProfileService} from '../services/profile.service';
 import {ItemService} from '../services/item.service';
 import { IUsers } from '../models/IUsers';
@@ -27,8 +27,8 @@ export class ProfileComponent implements OnInit {
        //alert('kkk');
        //alert("aaa : " + this.userId);
       // alert(this.username);
-       this.x.GetUserByUsername(this.username).subscribe(data=>{this.user=data});
-       this.y.getAllItems().subscribe(data=>{this.item=data;console.log(this.item)});
+       this.x.GetUserByUsername(this.username).subscribe(data=>{this.user=data,console.log(this.user.id)});
+       this.y.getAllItems().subscribe(data=>{this.item=data;console.log(this.item[0].fk_userId)});
       
     // this.id2 =this.xx.snapshot.params['itemId'];
     // this.y.GetItemById(this.id2).subscribe(data=>this.item=data);
