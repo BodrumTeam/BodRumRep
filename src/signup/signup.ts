@@ -34,20 +34,19 @@ export class Signup implements OnInit{
   
   ngOnInit(): void {
   }
-
   constructor(public router: Router, public http: Http,public locationService : LocationService) {
     this.locationService.getAllCountries().subscribe(data => this.countries = data );
     this.locationService.getAllCities().subscribe(data => this.cities = data );
     this.locationService.getAllRegiones().subscribe(data => this.regiones = data );
   }
 
-onSelectCountry(countryId:Number) {
+  onSelectCountry(countryId:Number) {
     this.newCities = this.cities.filter((item)=>item.Fk_countryId==countryId);
     this.newRegiones = [];
-}
-onSelectCity(cityId:Number){
+  }
+  onSelectCity(cityId:Number){
     this.newRegiones = this.regiones.filter((item)=>item.Fk_cityId==cityId);
-}
+  }
 //
   signup(event , name , username , password , email , age , mobile) {
     event.preventDefault();

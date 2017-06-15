@@ -1,24 +1,28 @@
 <br/><br/><br/><br/><br/>
-
 <div class="signup center-block jumbotron">
   <h1>Signup</h1>
-  <!--   -->
-  <form  role="form" (submit)="signup($event ,name.value , username.value, password.value , email.value , age.value , mobile.value , optradio )">
+  
+  <form role="form"  (submit)="signup($event ,name.value , username.value, password.value , email.value , age.value , mobile.value , optradio )" >
   <div class="form-group">
     <label for="name">Name</label>
-    <input  type="text" #name class="form-control" id="name" placeholder="Name">
+    <input  type="text" required oninvalid="this.setCustomValidity('Please Enter your Name')" #name class="form-control" id="name"  placeholder="Name">
   </div>
   <div class="form-group">
     <label for="username">Username</label>
-    <input type="text" #username class="form-control" id="username" placeholder="Username">
+    <input type="text" required oninvalid="this.setCustomValidity('Please Enter your Username')" #username class="form-control" id="username" placeholder="Username">
   </div>
   <div class="form-group">
     <label for="password">Password</label>
-    <input type="password" #password class="form-control" id="password" placeholder="Password">
+    <input type="password" required #password class="form-control" id="password" placeholder="Password">
   </div>
   <div class="form-group">
+    <label for="password">Confirm Password</label>
+    <input  type="password" required #confirmpassword class="form-control" id="confirmpassword" placeholder="Confirm Password">
+  </div>
+  <div class="alert alert-danger" *ngIf="form.controls.confirmPassword.errors?.MutchPassword">Password not match</div>
+  <div class="form-group">
     <label for="email">Email</label>
-    <input type="email" #email class="form-control" id="email" placeholder="Email">
+    <input type="email" required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" #email class="form-control" id="email" placeholder="Email">
   </div>
   <div class="form-group">
     <label for="age">Age</label>
@@ -26,7 +30,7 @@
   </div>
   <div class="form-group">
     <label for="mobile">Mobile</label>
-    <input type="number" min="0" maxlength="11" #mobile class="form-control" id="mobile" placeholder="Mobile">
+    <input type="number" required min="0" maxlength="11" #mobile class="form-control" id="mobile" placeholder="Mobile">
   </div>
   <div >
   <label class="radio-inline">
@@ -51,6 +55,8 @@
  </select>
 </div>
   
-  <button type="submit" class="btn btn-default">Submit</button>
+ <button type="submit"><span class="glyphicon glyphicon-check"></span> Submit</button>
+   <button [routerLink]="['/home']" ><span class="glyphicon glyphicon-thumbs-down"></span> Cancel</button>
+
 </form>
 </div>

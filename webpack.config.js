@@ -23,6 +23,7 @@ module.exports = {
       '@angular/core',
       '@angular/router',
       '@angular/http',
+      
       // RxJS
       'rxjs',
       // Other
