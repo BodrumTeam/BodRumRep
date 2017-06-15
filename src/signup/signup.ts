@@ -28,6 +28,7 @@ export class Signup implements OnInit{
   fk_countryId : number ;
   fk_cityId : number ;
   fk_regionId : number ;
+  passwordNotMatched : boolean  ;
 
   selectedCountry:Country = new Country(0,'') ;
   selectedCity:City = new City(0,'',0) ;
@@ -48,24 +49,31 @@ export class Signup implements OnInit{
     this.newRegiones = this.regiones.filter((item)=>item.Fk_cityId==cityId);
   }
 //
-  signup(event , name , username , password , email , age , mobile) {
+  signup(event , name , username , password ,confirmpassword, email , age , mobile) {
     event.preventDefault();
-    let gender = this.gender;
-    let fk_countryId = this.fk_countryId;
-    let fk_cityId = this.fk_cityId;
-    let fk_regionId = this.fk_regionId;
-    let body = JSON.stringify({ name , username, password , email , age , mobile ,gender, fk_countryId , fk_cityId , fk_regionId});
-    this.http.post('http://localhost:7919/rpc/account/signup', body, { headers: contentHeaders })
-      .subscribe(
-        response => {
-          //localStorage.setItem('curUserId',response.json().userId);
-          this.router.navigate(['home']);
-        },
-        error => {
-          alert(error.text());
-          console.log(error.text());
-        }
-      );
+    if(password==confirmpassword)
+    {
+      let gender = this.gender;
+      let fk_countryId = this.fk_countryId;
+      let fk_cityId = this.fk_cityId;
+      let fk_regionId = this.fk_regionId;
+      let body = JSON.stringify({ name , username, password , email , age , mobile ,gender, fk_countryId , fk_cityId , fk_regionId});
+      this.http.post('http://localhost:7919/rpc/account/signup', body, { headers: contentHeaders })
+        .subscribe(
+          response => {
+            //localStorage.setItem('curUserId',response.json().userId);
+            this.router.navigate(['home']);
+          },
+          error => {
+            alert(error.text());
+            console.log(error.text());
+          }
+        );
+    }
+    else
+    {
+        this.passwordNotMatched = true;
+    }
   }
 
   login(event) {
