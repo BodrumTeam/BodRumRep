@@ -8,6 +8,18 @@
    min-width:300px;
  }
 }
+.modal-body{    padding-left: 50px;
+    padding-right: 50px;
+}
+.inputModal{
+    margin-left: 20px;
+    width: 400px;
+    padding: 3px;
+    border-radius: 5px;
+}
+.form-control{
+  width:100%
+}
 .details{
   background-color:rgb(254, 231, 210);;
   display: inline-block;
