@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
-const styles = require('./siteDesc.component.css');
+// const styles = require('./siteDesc.component.css');
+const styles = require('../home.css');
 const template = require('./siteDesc.component.html');
 
 @Component ({

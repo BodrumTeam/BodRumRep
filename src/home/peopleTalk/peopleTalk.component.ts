@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
-const styles = require('./peopleTalk.component.css');
+// const styles = require('./peopleTalk.component.css');
+const styles = require('../home.css');
 const template = require('./peopleTalk.component.html');
 
 @Component({

@@ -26,8 +26,8 @@ export class ProfileComponent implements OnInit {
         this.username=this.xx.snapshot.params['username'];
        //alert('kkk');
        //alert("aaa : " + this.userId);
-       alert(this.username);
-       this.x.GetUserByUsername(this.username).subscribe(data=>{this.user=data; alert(this.user)});
+      // alert(this.username);
+       this.x.GetUserByUsername(this.username).subscribe(data=>{this.user=data});
        this.y.getAllItems().subscribe(data=>{this.item=data;console.log(this.item)});
       
     // this.id2 =this.xx.snapshot.params['itemId'];

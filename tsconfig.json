@@ -16,6 +16,7 @@
     "src/items/item.component.ts",
     "src/item details/detail.component.ts",
     "src/models/INeeds.ts",
+  
     "src/footer/index.ts",
     "src/profile/index.ts",
     "src/toolCategory/index.ts",
