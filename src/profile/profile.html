@@ -8,10 +8,10 @@
 	</div>
 </div>
 
-<!--<div class="section" id="div1"  *ngIf="user">-->
-<div class="section" id="div1">
+<div >
+<!--<div class="section"  id="div1">
 	<div class="container">
-		<div class="row">
+		<div class="row" style="margin-left: -75px;">
 			<div class="col-sm-12" id="cont">
 				<h2 class="info">Personal Information</h2><span class="glyphicon glyphicon-edit" id="ic"></span><br/><br/><br/>
 				<div id="con">
@@ -30,18 +30,45 @@
 		</div>
 	</div>
 </div>
+</div>
 <div>
 	<div id="div2" *ngIf="user" [ngStyle]="{'background-image':'url(' + user.Photo + ')','background-size':'cover'}"></div>
+</div>-->
+
+
+<div class="container" style="margin-top: 220px;">
+  <div class="jumbotron" style="height: 490px;padding-top: 20px;border-radius:10px;background-color:rgba(254, 231, 210, 0.37);">
+	  <h2 id="hea">Personal Information</h2><span class="glyphicon glyphicon-edit" id="ic"></span>
+                <div id="con">
+					<h4 class="personal">Name </h4>
+					<h5 *ngIf="user" class="details">{{user.name}}</h5><br/>
+					<h4 class="personal">Email</h4>
+					<h5 *ngIf="user" class="details">{{user.email}}</h5><br/>
+					<h4 class="personal">Age</h4>
+					<h5 *ngIf="user" class="details" style="margin-left: 45px;">{{user.age}}</h5><br/>
+					<h4 class="personal">Phone </h4>
+					<h5 *ngIf="user" class="details" id='spe'>{{user.mobile}}</h5><br/>
+					<h4 class="personal">Address</h4>
+					<h5 *ngIf="user" id='spe2'> {{user.regionName}} , {{user.cityName}} , {{user.countryName}}</h5><br/>
+				</div>
+	<div id="div2" *ngIf="user" [ngStyle]="{'background-image':'url(' + user.Photo + ')','background-size':'cover'}"></div>
+				
+  </div>  
 </div>
+
+        
+
+        <hr>
 <span class="glyphicon glyphicon-plus" id="add"></span>
-<div class="section">
-	<div class="container">
-		<div class="row" *ngIf="user">
-				<ul class="grid cs-style-2" *ngIf="item">
-				<div class="col-md-4 col-sm-6"  >
-					<figure *ngFor='let items of item' style="display:inline-block">
-						<img [src]='items.Photo'/>
-						<figcaption id="im">
+ 
+<!--<div>
+	<div>
+		<div *ngIf="user">
+				<ul  *ngIf="item">
+				<div style="width:100px;height:100px" >
+					<figure *ngFor='let items of item'>
+						<img *ngIf="items.fk_userId==user.id" [src]='items.Photo' style="width:300px;height:300px"/>
+						<figcaption >
 
 						</figcaption>
 					</figure>
@@ -53,4 +80,20 @@
 		<li><a href="#" id="see">See More</a></li>
 	</ul>
 
-</div>
+</div>-->
+
+<div *ngIf="user">
+	<div *ngIf="item">
+		
+		<figure  *ngFor='let items of item' class="figure">
+			<figure *ngIf="items.fk_userId==user.id" id="figImg" >
+			<img *ngIf="items.fk_userId==user.id" [src]="items.Photo" class="figure-img img-fluid rounded" style="width:300px;height:300px;border-radius:7px">
+			<figcaption *ngIf="items.fk_userId==user.id" class="figure-caption" style=" margin-left: 60px;">
+				<h5 class="he"><b style="color:#222222">Title</b> : {{items.Title}}</h5>
+				<h5 class="he"><b style="color:#222222">Price</b> : {{items.Price}}</h5>
+				<h5 class="he"><b style="color:#222222">Description</b> : {{items.Description}}</h5>
+			</figcaption>
+		</figure>
+		</figure>
+		<div>
+	</div>
